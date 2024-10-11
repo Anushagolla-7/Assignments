@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+</head>
+<body>
+  <h1>Admin Page</h1>
+  <p>Form details:</p>
+  <ul>
+    <li>Date: <span id="date"></span></li>
+    <li>Applicant Name: <span id="applicantName"></span></li>
+    <li>Authority: <span id="authority"></span></li>
+    <li>Reason: <span id="reason"></span></li>
+    <li>Start Date: <span id="startDate"></span></li>
+    <li>End Date: <span id="endDate"></span></li>
+  </ul>
+
+  <script>
+    // Retrieve the form data from local storage
+    const date = localStorage.getItem('date');
+    const applicantName = localStorage.getItem('applicantName');
+    const authority = localStorage.getItem('authority');
+    const reason = localStorage.getItem('reason');
+    const startDate = localStorage.getItem('startDate');
+    const endDate = localStorage.getItem('endDate');
+
+    // Display the form data on the admin page
+    document.getElementById('date').innerHTML = date;
+    document.getElementById('applicantName').innerHTML = applicantName;
+    document.getElementById('authority').innerHTML = authority;
+    document.getElementById('reason').innerHTML = reason;
+    document.getElementById('startDate').innerHTML = startDate;
+    document.getElementById('endDate').innerHTML = endDate;
+  </script>
+</body>
+</html>
