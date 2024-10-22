@@ -1,0 +1,50 @@
+<html>
+    <head>
+    <title>
+        caluclator
+    </title>
+    <script>
+        function scaluclate()
+        {
+            const choice = parseInt(prompt("Enter your choice:\n 1.Addition \n 2. Multiplication\n 3.Substraction\n 4.Division\n 5.Remainder"))
+            if(choice==1){
+              let a=  parseInt(prompt("Enter The first number"))
+              let b= parseInt(prompt("Enter The second number"))
+              sum=a+b
+              alert("sum of the numbers is: "+sum)
+            }
+            if(choice==2){
+              let a=  parseInt(prompt("Enter The first number"))
+              let b= parseInt(prompt("Enter The second number"))
+              prod=a*b
+              alert("product of the numbers is: "+prod)
+            }
+            if(choice==3){
+              let a=  parseInt(prompt("Enter The first number"))
+              let b= parseInt(prompt("Enter The second number"))
+              diff=a-b
+              alert("Difference of the numbers is: "+diff)
+            }
+            if(choice==4){
+              let a=  parseInt(prompt("Enter The first number"))
+              let b= parseInt(prompt("Enter The second number"))
+              div=a/b
+              alert("division of the numbers is: "+div)
+            }
+            if(choice==5){
+              let a=  parseInt(prompt("Enter The first number"))
+              let b= parseInt(prompt("Enter The second number"))
+              rem=a%b
+              alert("remainder of the numbers is: "+rem)
+            }
+            else if(choice>5){
+                alert("Enter only the valid options")
+            }
+        }
+        scaluclate()
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>
