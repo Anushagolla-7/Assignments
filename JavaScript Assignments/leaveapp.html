@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+        }
+        form {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: rgb(183, 253, 253);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #de9d34;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #df952e;
+        }
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+<form id="leaveForm">
+    <h2>Leave Application Form</h2>
+    
+    <label for="name">Student Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="rollNumber">Roll Number:</label>
+    <input type="text" id="rollNumber" name="rollNumber" required>
+
+    <label for="startDate">Start Date of Leave:</label>
+    <input type="date" id="startDate" name="startDate" required>
+
+    <label for="endDate">End Date of Leave:</label>
+    <input type="date" id="endDate" name="endDate" required>
+
+    <label for="reason">Reason for Leave:</label>
+    <textarea id="reason" name="reason" rows="4" required></textarea>
+
+    <button type="submit">Submit Application</button>
+</form>
+
+<script>
+    document.getElementById('leaveForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const rollNumber = document.getElementById('rollNumber').value;
+        const startDate = document.getElementById('startDate').value;
+        const endDate = document.getElementById('endDate').value;
+        const reason = document.getElementById('reason').value;
+
+        if (name && rollNumber && startDate && endDate && reason) {
+            const confirmationMessage = 
+                "Application Submitted Successfully!\n" +
+                "Name: " + name + "\n" +
+                "Roll Number: " + rollNumber + "\n" +
+                "Start Date of Leave: " + startDate + "\n" +
+                "End Date of Leave: " + endDate + "\n" +
+                "Reason: " + reason;
+
+            alert(confirmationMessage);
+
+            document.getElementById('leaveForm').reset();
+        }
+    });
+</script>
+
+</body>
+</html>
